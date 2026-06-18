@@ -37,7 +37,8 @@ const faqs = [
     question: "Where can I see subscription plans?",
     answer: (
       <p>
-        All plans are listed in <DiscordPill label="#subscription" />.
+        All plans are listed in{" "}
+        <DiscordPill label="#subscription" href="#pricing" />.
       </p>
     ),
   },

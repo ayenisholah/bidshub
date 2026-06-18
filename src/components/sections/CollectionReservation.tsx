@@ -1,4 +1,4 @@
-import { BookmarkCheck, Info, ShieldAlert } from "lucide-react";
+import { Info, ShieldAlert } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { GradientText } from "@/components/ui/GradientText";
 
@@ -16,11 +16,6 @@ export function CollectionReservation() {
     <section className="py-28 px-4 sm:px-6 bg-bg-surface">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal className="text-center mb-12">
-          <BookmarkCheck
-            size={36}
-            className="text-accent-violet mx-auto mb-5"
-            aria-hidden="true"
-          />
           <h2 className="text-4xl sm:text-5xl font-bold font-display mb-4">
             Collection{" "}
             <GradientText>Reservation</GradientText>

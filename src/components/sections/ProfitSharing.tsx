@@ -92,9 +92,9 @@ export function ProfitSharing() {
               </p>
               <div className="grid gap-3">
                 {[
-                  "High-volume and aggressive bidders",
-                  "Serious traders who prefer no monthly cost upfront",
-                  "Apply via ticket - reviewed manually",
+                  "Aggressive bidding setups",
+                  "High-volume NFT traders",
+                  "Users who want to dominate the bidding market",
                 ].map((item) => (
                   <div
                     key={item}
