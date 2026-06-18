@@ -1,7 +1,6 @@
 import { Terminal, Zap, ArrowRight } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { DiscordButton } from "@/components/ui/DiscordButton";
-import { DiscordPill } from "@/components/ui/DiscordPill";
 import { GradientText } from "@/components/ui/GradientText";
 
 const speedStats = [
@@ -77,8 +76,8 @@ export function ApiAccess() {
                     aria-hidden="true"
                   />
                   <p>
-                    Need API access or a custom integration? Open a ticket in{" "}
-                    <DiscordPill label="#create-a-ticket" /> in our Discord.
+                    Need API access or a custom integration? Open a ticket in
+                    our Discord.
                   </p>
                 </div>
               </div>
