@@ -90,20 +90,18 @@ export function ProfitSharing() {
                 bidders who want to scale aggressively without paying a fixed monthly
                 fee upfront.
               </p>
-              <div className="grid gap-3">
+              <ul className="space-y-3 text-sm text-text-secondary">
                 {[
                   "Aggressive bidding setups",
                   "High-volume NFT traders",
                   "Users who want to dominate the bidding market",
                 ].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-lg border border-border-subtle bg-white/[0.025] px-4 py-3 text-sm text-text-secondary"
-                  >
+                  <li key={item} className="flex gap-2.5">
+                    <span className="text-accent-violet mt-0.5 shrink-0">-&gt;</span>
                     {item}
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </ScrollReveal>
         </div>

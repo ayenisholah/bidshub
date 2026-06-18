@@ -140,7 +140,7 @@ export type HeroStat =
   | { type: "text"; label: string; display: string };
 
 export const HERO_STATS: HeroStat[] = [
-  { type: "counter", label: "Max bids / sec", value: 100, suffix: "+" },
+  { type: "counter", label: "Bids / sec", value: 100, suffix: "+" },
   { type: "text", label: "Marketplaces", display: "OpenSea + Blur" },
   { type: "text", label: "Included tools", display: "Analyzer Tools" },
 ];
