@@ -76,7 +76,7 @@ export const PRICING_TIERS: PricingTier[] = [
     price: "Custom",
     isTicket: true,
     ctaLabel: "Open a ticket",
-    features: ["Custom wallets", "Custom tasks"],
+    features: [],
   },
 ];
 
