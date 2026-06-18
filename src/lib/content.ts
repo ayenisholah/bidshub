@@ -75,8 +75,8 @@ export const PRICING_TIERS: PricingTier[] = [
     speedBps: null,
     price: "Custom",
     isTicket: true,
-    ctaLabel: "Open a ticket",
-    features: [],
+    ctaLabel: "Contact us on Discord",
+    features: ["Talk to us about your setup"],
   },
 ];
 
