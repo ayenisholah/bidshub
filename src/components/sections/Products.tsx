@@ -56,7 +56,7 @@ export function Products() {
             <p className="text-sm text-text-secondary">
               Subscription plans are available now. Need API access, a trial, or a
               custom setup?{" "}
-              <DiscordPill label="Open a ticket" />
+              <DiscordPill label="Open a ticket" /> in our Discord.
             </p>
             <a
               href="#pricing"
