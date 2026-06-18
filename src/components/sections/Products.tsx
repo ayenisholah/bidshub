@@ -58,9 +58,12 @@ export function Products() {
               custom setup?{" "}
               <DiscordPill label="Open a ticket" />
             </p>
-            <DiscordButton variant="outline" className="text-xs px-4 py-2 shrink-0">
+            <a
+              href="#pricing"
+              className="inline-flex items-center justify-center rounded-full font-semibold transition-all duration-200 px-4 py-2 text-xs border border-accent-violet/50 text-accent-violet-light hover:bg-accent-violet/10 hover:border-accent-violet focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-violet shrink-0"
+            >
               View Pricing
-            </DiscordButton>
+            </a>
           </div>
         </ScrollReveal>
 

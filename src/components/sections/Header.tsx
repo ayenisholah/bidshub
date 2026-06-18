@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { NAV_LINKS } from "@/lib/content";
@@ -24,7 +25,15 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold font-display">
+        <Link href="/" className="flex items-center gap-2 text-2xl font-bold font-display">
+          <Image
+            src="/logo.webp"
+            alt=""
+            width={34}
+            height={34}
+            className="rounded-full"
+            priority
+          />
           <GradientText>BidsHub</GradientText>
         </Link>
 

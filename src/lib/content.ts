@@ -3,8 +3,9 @@ export const DISCORD_URL = "https://discord.gg/sSDuypgJM";
 export const NAV_LINKS = [
   { label: "Products", href: "#products" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Profit Sharing", href: "#profit-sharing" },
+  { label: "Profit Sharing Plan", href: "#profit-sharing" },
   { label: "API", href: "#api" },
+  { label: "FAQ", href: "#faq" },
 ] as const;
 
 export type PricingTier = {
@@ -17,6 +18,7 @@ export type PricingTier = {
   popular?: boolean;
   isTicket?: boolean;
   ctaLabel: string;
+  features: string[];
 };
 
 export const PRICING_TIERS: PricingTier[] = [
@@ -28,6 +30,7 @@ export const PRICING_TIERS: PricingTier[] = [
     note: "3 days",
     isTicket: true,
     ctaLabel: "Request via ticket",
+    features: ["1 wallet", "Trial access"],
   },
   {
     id: "standard",
@@ -36,6 +39,7 @@ export const PRICING_TIERS: PricingTier[] = [
     price: "0.20 ETH",
     period: "/ month",
     ctaLabel: "Get started",
+    features: ["2 wallets", "100 tasks"],
   },
   {
     id: "pro",
@@ -44,6 +48,7 @@ export const PRICING_TIERS: PricingTier[] = [
     price: "0.30 ETH",
     period: "/ month",
     ctaLabel: "Get started",
+    features: ["Unlimited wallets", "Unlimited tasks"],
   },
   {
     id: "ultra",
@@ -53,6 +58,7 @@ export const PRICING_TIERS: PricingTier[] = [
     period: "/ month",
     popular: true,
     ctaLabel: "Get started",
+    features: ["Unlimited wallets", "Unlimited tasks"],
   },
   {
     id: "enterprise",
@@ -61,6 +67,7 @@ export const PRICING_TIERS: PricingTier[] = [
     price: "0.65 ETH",
     period: "/ month",
     ctaLabel: "Get started",
+    features: ["Unlimited wallets", "Unlimited tasks"],
   },
   {
     id: "custom",
@@ -69,12 +76,8 @@ export const PRICING_TIERS: PricingTier[] = [
     price: "Custom",
     isTicket: true,
     ctaLabel: "Open a ticket",
+    features: ["Custom wallets", "Custom tasks"],
   },
-];
-
-export const PLAN_INCLUDES = [
-  "Unlimited wallets",
-  "Unlimited tasks (Pro and above)",
 ];
 
 export type PrepaidDiscount = { months: number; discount: number };

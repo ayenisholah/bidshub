@@ -15,11 +15,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "BidsHub — Automated NFT Bidding Bot",
+  title: "BidsHub - Automated NFT Bidding Bot",
   description:
-    "High-speed NFT bidding automation on OpenSea and Blur. 1 to 100+ bids per second. Custom analyzer tools, profit sharing, and API access. Your tool for passive income.",
+    "High-speed NFT bidding automation on OpenSea and Blur. 1 to 100+ bids per second. Custom analyzer tools, Profit Sharing Plan, and API access. Your tool for passive income.",
   openGraph: {
-    title: "BidsHub — Automated NFT Bidding Bot",
+    title: "BidsHub - Automated NFT Bidding Bot",
     description:
       "1 to 100+ bids/sec. OpenSea + Blur. Custom analyzer tools. Your tool for passive income.",
     type: "website",

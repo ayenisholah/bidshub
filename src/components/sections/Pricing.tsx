@@ -8,7 +8,6 @@ import {
   PRICING_TIERS,
   PREPAID_DISCOUNTS,
   ADD_ONS,
-  PLAN_INCLUDES,
   type PricingTier,
 } from "@/lib/content";
 import { cn } from "@/lib/utils";
@@ -25,7 +24,7 @@ function PricingCard({ tier, index }: { tier: PricingTier; index: number }) {
           "glass-card p-6 flex flex-col h-full relative transition-all duration-300",
           tier.popular
             ? "border-accent-violet/60 glow-violet"
-            : "hover:border-accent-violet/30 hover:shadow-[0_0_24px_rgba(124,58,237,0.15)]"
+            : "hover:border-accent-violet/30 hover:shadow-[0_0_24px_rgba(239,24,96,0.16)]"
         )}
         aria-label={`${tier.name} plan`}
       >
@@ -80,25 +79,15 @@ function PricingCard({ tier, index }: { tier: PricingTier; index: number }) {
 
         {/* Included features */}
         <ul className="flex-1 space-y-2.5 mb-6">
-          {PLAN_INCLUDES.map((feature) => {
-            const isTasks = feature.includes("Pro and above");
-            const locked =
-              isTasks &&
-              (tier.id === "trial" || tier.id === "standard");
+          {tier.features.map((feature) => {
             return (
               <li
                 key={feature}
-                className={cn(
-                  "flex items-start gap-2 text-sm",
-                  locked ? "text-text-muted line-through" : "text-text-secondary"
-                )}
+                className="flex items-start gap-2 text-sm text-text-secondary"
               >
                 <Check
                   size={13}
-                  className={cn(
-                    "mt-0.5 shrink-0",
-                    locked ? "text-text-muted" : "text-accent-cyan"
-                  )}
+                  className="mt-0.5 shrink-0 text-accent-cyan"
                   aria-hidden="true"
                 />
                 {feature}

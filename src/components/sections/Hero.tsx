@@ -1,5 +1,6 @@
 "use client";
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useReducedMotion, useInView } from "motion/react";
 import { GradientText } from "@/components/ui/GradientText";
 import { DiscordButton } from "@/components/ui/DiscordButton";
@@ -106,6 +107,17 @@ export function Hero() {
         animate="show"
         className="relative z-10 max-w-4xl w-full"
       >
+        <motion.div variants={item} className="mb-8 flex justify-center">
+          <Image
+            src="/logo.webp"
+            alt="BidsHub"
+            width={168}
+            height={168}
+            priority
+            className="h-32 w-32 sm:h-40 sm:w-40 rounded-3xl object-cover shadow-[0_0_48px_rgba(239,24,96,0.28)]"
+          />
+        </motion.div>
+
         <motion.p
           variants={item}
           className="text-accent-violet-light text-xs font-semibold uppercase tracking-[0.2em] mb-5 font-display"

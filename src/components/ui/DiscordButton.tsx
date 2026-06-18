@@ -13,7 +13,7 @@ type Props = {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-gradient-to-r from-accent-violet to-accent-cyan text-white hover:opacity-90 hover:scale-105 shadow-[0_0_24px_rgba(124,58,237,0.35)] hover:shadow-[0_0_36px_rgba(124,58,237,0.55)]",
+    "bg-gradient-to-r from-accent-magenta via-accent-violet to-accent-cyan text-white hover:opacity-90 hover:scale-105 shadow-[0_0_24px_rgba(239,24,96,0.35)] hover:shadow-[0_0_36px_rgba(10,168,255,0.45)]",
   outline:
     "border border-accent-violet/50 text-accent-violet-light hover:bg-accent-violet/10 hover:border-accent-violet",
   ghost:

@@ -1,10 +1,9 @@
 "use client";
 import Link from "next/link";
-import { ShieldCheck, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { DiscordButton } from "@/components/ui/DiscordButton";
-import { DiscordPill } from "@/components/ui/DiscordPill";
 import { GradientText } from "@/components/ui/GradientText";
 import { DISCORD_URL, NAV_LINKS } from "@/lib/content";
 
@@ -86,17 +85,7 @@ export function FooterCTA() {
             </Link>
           </div>
 
-          {/* Security notice + trust */}
-          <div className="mt-8 pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
-            <div className="flex items-start sm:items-center gap-2 text-xs text-text-muted">
-              <ShieldCheck size={13} className="shrink-0 text-accent-cyan mt-0.5 sm:mt-0" aria-hidden="true" />
-              <span>
-                Never share your seed phrase or private key. BidsHub will never ask
-                for it. Only trust{" "}
-                <DiscordPill label="#official-links" />
-                {" "}in our Discord.
-              </span>
-            </div>
+          <div className="mt-8 pt-6 border-t border-border-subtle flex justify-end">
             <p className="text-xs text-text-muted">
               &copy; {new Date().getFullYear()} BidsHub
             </p>
