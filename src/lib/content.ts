@@ -76,7 +76,7 @@ export const PRICING_TIERS: PricingTier[] = [
     price: "Custom",
     isTicket: true,
     ctaLabel: "Contact us on Discord",
-    features: ["Talk to us about your setup"],
+    features: ["Contact us about your custom setup"],
   },
 ];
 
