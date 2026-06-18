@@ -78,7 +78,7 @@ export function ApiAccess() {
                   />
                   <p>
                     Need API access or a custom integration? Open a ticket in{" "}
-                    <DiscordPill label="#create-a-ticket" />.
+                    <DiscordPill label="#create-a-ticket" /> in our Discord.
                   </p>
                 </div>
               </div>

@@ -174,7 +174,7 @@ export function Pricing() {
                   <div>
                     <p className="font-semibold text-sm">{addon.name}</p>
                     {addon.note && (
-                      <p className="text-xs text-text-secondary mt-0.5">
+                      <p className="text-xs text-text-primary/80 mt-0.5">
                         {addon.note}
                       </p>
                     )}
