@@ -29,7 +29,7 @@ export const PRICING_TIERS: PricingTier[] = [
     price: "Free",
     note: "3 days",
     isTicket: true,
-    ctaLabel: "Contact us in Discord",
+    ctaLabel: "Contact us on Discord",
     features: ["1 wallet", "Trial access"],
   },
   {
@@ -38,7 +38,7 @@ export const PRICING_TIERS: PricingTier[] = [
     speedBps: 30,
     price: "0.20 ETH",
     period: "/ month",
-    ctaLabel: "Contact us in Discord",
+    ctaLabel: "Contact us on Discord",
     features: ["2 wallets", "100 tasks"],
   },
   {
@@ -47,7 +47,7 @@ export const PRICING_TIERS: PricingTier[] = [
     speedBps: 60,
     price: "0.30 ETH",
     period: "/ month",
-    ctaLabel: "Contact us in Discord",
+    ctaLabel: "Contact us on Discord",
     features: ["Unlimited wallets", "Unlimited tasks"],
   },
   {
@@ -57,7 +57,7 @@ export const PRICING_TIERS: PricingTier[] = [
     price: "0.45 ETH",
     period: "/ month",
     popular: true,
-    ctaLabel: "Contact us in Discord",
+    ctaLabel: "Contact us on Discord",
     features: ["Unlimited wallets", "Unlimited tasks"],
   },
   {
@@ -66,7 +66,7 @@ export const PRICING_TIERS: PricingTier[] = [
     speedBps: 150,
     price: "0.65 ETH",
     period: "/ month",
-    ctaLabel: "Contact us in Discord",
+    ctaLabel: "Contact us on Discord",
     features: ["Unlimited wallets", "Unlimited tasks"],
   },
   {
