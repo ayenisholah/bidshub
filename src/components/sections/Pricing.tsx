@@ -40,8 +40,8 @@ function PricingCard({ tier, index }: { tier: PricingTier; index: number }) {
 
         {/* Speed badge */}
         <div className="flex items-center gap-2 mb-5">
-          <Gauge size={14} className="text-text-muted" aria-hidden="true" />
-          <span className="text-xs text-text-muted font-mono">
+          <Gauge size={14} className="text-text-secondary/80" aria-hidden="true" />
+          <span className="text-xs text-text-secondary/80 font-mono">
             {tier.speedBps !== null
               ? `${tier.speedBps} bids / sec`
               : "Custom speed"}
@@ -57,7 +57,7 @@ function PricingCard({ tier, index }: { tier: PricingTier; index: number }) {
               <span className="text-3xl font-bold font-display tabnum gradient-text">
                 Free
               </span>
-              <span className="text-text-muted text-sm ml-2 font-mono">
+              <span className="text-text-secondary/80 text-sm ml-2 font-mono">
                 ({tier.note})
               </span>
             </div>
@@ -70,7 +70,7 @@ function PricingCard({ tier, index }: { tier: PricingTier; index: number }) {
               <span className="text-3xl font-bold font-display tabnum gradient-text">
                 {tier.price}
               </span>
-              <span className="text-text-muted text-sm font-mono">
+              <span className="text-text-secondary/80 text-sm font-mono">
                 {tier.period}
               </span>
             </div>

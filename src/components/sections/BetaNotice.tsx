@@ -36,7 +36,10 @@ export function BetaNotice() {
               </p>
             </div>
           </div>
-          <DiscordButton variant="primary" className="shrink-0 text-sm px-5 py-2.5">
+          <DiscordButton
+            variant="primary"
+            className="w-full sm:w-auto md:shrink-0 text-sm px-5 py-3 sm:py-2.5"
+          >
             Claim Early Access
           </DiscordButton>
         </div>
