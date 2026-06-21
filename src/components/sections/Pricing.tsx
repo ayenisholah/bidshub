@@ -12,20 +12,40 @@ import {
 } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
+const speedBadgeStyles: Record<number, { badge: string; icon: string }> = {
+  1: {
+    badge: "border-white/25 bg-white/[0.06]",
+    icon: "text-white",
+  },
+  30: {
+    badge: "border-emerald-400/40 bg-emerald-400/[0.12]",
+    icon: "text-emerald-300",
+  },
+  60: {
+    badge: "border-yellow-300/45 bg-yellow-300/[0.13]",
+    icon: "text-yellow-200",
+  },
+  100: {
+    badge: "border-orange-400/45 bg-orange-400/[0.14]",
+    icon: "text-orange-300",
+  },
+  150: {
+    badge: "border-red-400/45 bg-red-400/[0.14]",
+    icon: "text-red-300",
+  },
+};
+
+const customSpeedBadgeStyle = {
+  badge: "border-border-subtle bg-white/[0.03]",
+  icon: "text-text-secondary/80",
+};
+
 function PricingCard({ tier, index }: { tier: PricingTier; index: number }) {
   const reduced = useReducedMotion();
-  const meterColorClass =
-    tier.speedBps === 1
-      ? "text-white"
-      : tier.speedBps === 30
-        ? "text-emerald-400"
-        : tier.speedBps === 60
-          ? "text-yellow-300"
-          : tier.speedBps === 100
-            ? "text-orange-400"
-            : tier.speedBps === 150
-              ? "text-red-400"
-              : "text-text-secondary/80";
+  const speedBadgeStyle =
+    tier.speedBps !== null
+      ? speedBadgeStyles[tier.speedBps] ?? customSpeedBadgeStyle
+      : customSpeedBadgeStyle;
 
   return (
     <ScrollReveal delay={index * 0.07}>
@@ -51,9 +71,18 @@ function PricingCard({ tier, index }: { tier: PricingTier; index: number }) {
         )}
 
         {/* Speed badge */}
-        <div className="flex items-center gap-2 mb-5">
-          <Gauge size={14} className={meterColorClass} aria-hidden="true" />
-          <span className="text-xs text-text-primary font-mono">
+        <div
+          className={cn(
+            "mb-5 inline-flex w-fit items-center gap-2.5 rounded-full border px-3.5 py-2",
+            speedBadgeStyle.badge
+          )}
+        >
+          <Gauge
+            size={18}
+            className={cn("shrink-0", speedBadgeStyle.icon)}
+            aria-hidden="true"
+          />
+          <span className="text-sm text-white font-mono font-semibold">
             {tier.speedBps !== null
               ? `${tier.speedBps} bids / sec`
               : "Custom speed"}
