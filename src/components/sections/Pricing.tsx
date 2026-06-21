@@ -14,6 +14,18 @@ import { cn } from "@/lib/utils";
 
 function PricingCard({ tier, index }: { tier: PricingTier; index: number }) {
   const reduced = useReducedMotion();
+  const meterColorClass =
+    tier.speedBps === 1
+      ? "text-white"
+      : tier.speedBps === 30
+        ? "text-emerald-400"
+        : tier.speedBps === 60
+          ? "text-yellow-300"
+          : tier.speedBps === 100
+            ? "text-orange-400"
+            : tier.speedBps === 150
+              ? "text-red-400"
+              : "text-text-secondary/80";
 
   return (
     <ScrollReveal delay={index * 0.07}>
@@ -40,8 +52,8 @@ function PricingCard({ tier, index }: { tier: PricingTier; index: number }) {
 
         {/* Speed badge */}
         <div className="flex items-center gap-2 mb-5">
-          <Gauge size={14} className="text-text-secondary/80" aria-hidden="true" />
-          <span className="text-xs text-text-secondary/80 font-mono">
+          <Gauge size={14} className={meterColorClass} aria-hidden="true" />
+          <span className="text-xs text-text-primary font-mono">
             {tier.speedBps !== null
               ? `${tier.speedBps} bids / sec`
               : "Custom speed"}
